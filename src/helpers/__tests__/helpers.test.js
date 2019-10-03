@@ -28,6 +28,14 @@ describe('sum', () => {
 
 describe('multiply', () => {
   // write tests! <================================================
+
+  it("should return 10", () => {
+    expect(helpers.multiply(2, 5)).toBe(10)
+  })
+
+  it("should throw an error 'number required' if one of the arg is not a number", () => {
+    expect(() => helpers.multiply('1', '2')).toThrow();
+  })
 });
 
 describe('personMaker', () => {
